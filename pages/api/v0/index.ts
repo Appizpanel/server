@@ -9,6 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(401).json({ error: 'An API key is required to connect to Appizpanel' });
     return;
   }
+
+  // API anahtarı doğrulandıysa, başarılı bir durumda mesaj döndür.
+  res.status(200).json({ message: 'API Connection Successful' });
 };
-
-
